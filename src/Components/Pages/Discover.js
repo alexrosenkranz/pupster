@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Button from '../Button';
 import {getRandomDog} from '../../Utils/API';
 
 class Discover extends Component {
@@ -45,18 +46,20 @@ class Discover extends Component {
         <div className="row justify-content-center">
           <div className="col-12 col-sm-8 col-md-6 text-center">
             <img className="img-fluid img-thumbnail" src={this.state.dogPhoto} alt="Doggo"/>
-
-            <h3>You've matched with {this.state.dogMatchCount} 
-                Doggos</h3>
+          
+            <h3>You've matched with {this.state.dogMatchCount} Doggos</h3>
 
             <div className="d-flex justify-content-between">
-              <button className="btn btn-success btn-lg" onClick={this.handleUpvote}>
+              <Button 
+                className="btn btn-success btn-lg" 
+                onClick={this.handleUpvote}>
                 <i className="fa fa-thumbs-up"></i>
-                Vote Yes</button>
+                Vote Yes
+              </Button>
 
-              <button className="btn btn-danger btn-lg" onClick={this.handleDownvote}>
+              <Button className="btn btn-danger btn-lg" onClick={this.handleDownvote}>
                 <i className="fa fa-thumbs-down"></i>
-                Vote No</button>
+                Vote No</Button>
             </div>
           </div>
         </div>
